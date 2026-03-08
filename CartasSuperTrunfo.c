@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
 int main() {
+  /*
+soma (+)
+subtracao(-)
+multiplicacao(*)
+divisao(/)
+*/
   // Área para definição das variáveis para armazenar as propriedades das cidades
 
   int populacao, numero_de_pontos_turisticos;
 char estado[50], codigo_da_carta[50], nome_da_cidade[50];
 float area_em_km², pib;
-  
-// Área para entrada de dados carta 1
+float divisao;
+
+// *** Área para entrada de dados carta 1
 printf("Cadastro carta 1 \n");
 
 printf("Digite o codigo da carta: \n");
@@ -38,7 +41,14 @@ scanf("%f", &area_em_km²);
 printf("Codigo da carta: %s\n  Estado: %s\n  Cidade: %s\n", codigo_da_carta, estado, nome_da_cidade);
 printf("População: %d\n  Pontos turisticos: %d\n  Pib: %f\n  Area km²: %f\n", populacao, numero_de_pontos_turisticos, pib, area_em_km²);
 
-// Área para entrada de dados carta 2
+// *** calculo ***//
+divisao = populacao / area_em_km²;
+printf("A densidade populacional e: %f\n", divisao);
+
+divisao = pib / populacao;
+printf("Pib per capital e: %f\n",divisao);
+
+// *** Área para entrada de dados carta 2
 printf("Cadastro carta 2\n");
 
 printf("Digite o codigo da carta: \n");
@@ -64,6 +74,13 @@ scanf("%f", &area_em_km²);
 
 printf("Codigo da carta: %s\n  Estado: %s\n  Cidade: %s\n", codigo_da_carta, estado, nome_da_cidade);
 printf("População: %d\n  Pontos turisticos: %d\n  Pib: %f\n  Area km²: %f\n", populacao, numero_de_pontos_turisticos, pib, area_em_km²);
+
+// *** calculo ***//
+divisao = populacao / area_em_km²;
+printf("A densidade populacional e: %f\n", divisao);
+
+divisao = pib / populacao;
+printf("Pib per capital e: %f\n",divisao);
 
 return 0;
 } 
