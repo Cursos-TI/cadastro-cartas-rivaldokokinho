@@ -7,7 +7,6 @@ int numero_de_pontos_turisticos,  numero_de_pontos_turisticos1;
 char estado[50], estado1[50], codigo_da_carta[50], codigo_da_carta1[50], nome_da_cidade[50], nome_da_cidade1[50];
 float area_em_km², area_em_km²1, pib, pib1;
 float pib_per_capital, pib_per_capital1, densidade_populacional, densidade_populacional1, super_poder, super_poder1;
-int resultado;
 // *** Área para entrada de dados carta 1
 printf("Cadastro carta 1 \n");
 
