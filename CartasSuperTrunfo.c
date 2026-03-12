@@ -80,15 +80,27 @@ printf("Pib per capital: %f\n", pib_per_capital1);
 super_poder1 = (float) + area_em_km²1 + pib1 + numero_de_pontos_turisticos1 + pib_per_capital1 + densidade_populacional1;
 printf("Super poder: %f\n ", super_poder1);
 
+int resultadopopulacao, resultadoturisticos, resultadoarea, resultadopib, resultadodensidade, resultadopibcapital, resultadopoder;
+
 //           COMPARACAO DE CARTAS                 //
-populacao1 > populacao;
-numero_de_pontos_turisticos1 > numero_de_pontos_turisticos;
-area_em_km²1 > area_em_km²;
-pib1 > pib;
-densidade_populacional1 < densidade_populacional;
-pib_per_capital1 > pib_per_capital;
-super_poder1 > super_poder;
+resultadopopulacao = populacao > populacao1;
+resultadoturisticos = numero_de_pontos_turisticos > numero_de_pontos_turisticos1;
+resultadoarea = area_em_km² > area_em_km²1; 
+resultadopib = pib > pib1; 
+resultadodensidade = densidade_populacional < densidade_populacional1;
+resultadopibcapital = pib_per_capital > pib_per_capital1;
+resultadopoder = super_poder > super_poder1;
+
+printf("Resultado\n");
+printf("Populacao carta 1 venceu: %d\n", (populacao1 > populacao));
+printf("Numeros de pontos turisticos carta 1 venceu: %d\n", (numero_de_pontos_turisticos > numero_de_pontos_turisticos1));
+printf("Area_em_km² carta 1 venceu: %d\n", (area_em_km² > area_em_km²1));
+printf("Pib carta 1 venceu: %d\n", (pib > pib1));
+printf("Densidade populacional carta 1 venceu: %d\n",(densidade_populacional < densidade_populacional1 ));
+printf("Pib per capital carta 1 venceu: %d\n", (pib_per_capital > pib_per_capital1));
+printf("Super poder carta 1 venceu: %d\n", (super_poder > super_poder1));
 
 
 return 0;
+
 } 
