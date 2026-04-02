@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
 //                       Área para definição das variáveis para armazenar as propriedades das cidades
@@ -81,14 +82,68 @@ printf("Pib per capital: %f\n", pib_per_capital1);
 super_poder1 = (float) + area_em_km²1 + pib1 + numero_de_pontos_turisticos1 + pib_per_capital1 + densidade_populacional1;
 printf("Super poder: %f\n ", super_poder1);
 
-//                                            Logica do jogo
+//                                              Menu do jogo
+int jogador1;
 
-if(populacao > populacao1){
-    printf("Carta 1 %s venceu com o numero maior de população de: %lu \n", estado, populacao);
-}else {
-    printf("Carta 2 %s venceu com o numero maior de população de: %lu \n", estado1, populacao1);
+printf("Escolha um atributo para comparação! \n");
+printf("1. Regras do jogo! \n");
+printf("2. Populacao. \n");
+printf("3. Numeros de pontos turisticos. \n");
+printf("4. Pib. \n");
+printf("5. km². \n");
+printf("6. Densidade populacional. \n");
+printf("Escolha! \n");
+scanf("%d", &jogador1);
+//                                             Logica do jogo
+switch (jogador1)
+{
+case 1:
+        printf(" A regra geral é: vence a carta com o maior valor no atributo escolhido. Porém, para a Densidade Demográfica, a regra inverte: vence a carta com o menor valor.");
+break;
+case 2:
+      if (populacao > populacao1)
+        printf("%s venceu de %s com a populacao %lu maior que %lu ", estado, estado1, populacao, populacao1);
+      else if (populacao == populacao1)
+        printf("Empate!!!");
+      else  
+        printf("%s venceu de %s com a populacao %lu maior que %lu", estado1, estado, populacao1, populacao);      
+break;
+case 3:
+      if (numero_de_pontos_turisticos > numero_de_pontos_turisticos1)
+        printf("%s venceu de %s com os pontos turistico %d maior que %d", estado, estado1, numero_de_pontos_turisticos, numero_de_pontos_turisticos1);
+      else if (densidade_populacional == densidade_populacional1)
+        printf("Empate!!!");
+      else  
+        printf("%s venceu de %s com os pontos turistico %d maior que %d", estado1, estado, numero_de_pontos_turisticos1, numero_de_pontos_turisticos);  
+break;
+case 4:
+      if (pib > pib1)
+        printf("%s venceu de %s com o pib %f maior que %f", estado, estado1, pib, pib1);
+      else if (pib == pib1)
+        printf("Empate!!!");
+      else
+        printf("%s venceu de %s com o pib %f maior que %f", estado1, estado, pib1, pib);
+break;
+case 5:
+      if (area_em_km² > area_em_km²1)
+        printf("%s venceu de %s com a area de km² %f maior que %f", estado, estado1, area_em_km², area_em_km²1);
+      else if (area_em_km² == area_em_km²1)
+        printf("Empate!!!");
+      else
+        printf("%s venceu de %s com a area de km² %f maior que %f", estado1, estado, area_em_km²1, area_em_km²);
+break;
+case 6:
+      if (densidade_populacional < densidade_populacional1)
+        printf("%s venceu de %s com a densidade populacional %f menor que %f", estado, estado1, densidade_populacional, densidade_populacional1);
+      else if (densidade_populacional == densidade_populacional1)
+        printf("Empate!!!");
+      else  
+        printf("%s venceu de %s com a densidade populacional %f menor que %f", estado1, estado, densidade_populacional1, densidade_populacional);
+break;                                
+default:
+        printf("Opção invalida! \n");
+    break;
 }
-
 
 return 0;
 }
